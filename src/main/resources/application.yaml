@@ -1,0 +1,30 @@
+server:
+  port: 8443
+  ssl:
+    key-alias: selfsigned
+    key-password: test1234
+    key-store: classpath:keystore.jks
+    key-store-provider: SUN
+    key-store-type: JKS
+
+
+spring:
+  application:
+    name: login-service
+  thymeleaf:
+    cache: false
+
+eureka:
+  instance:
+    nonSecurePortEnabled: false
+    securePortEnabled: true
+  client:
+    serviceUrl:
+      defaultZone: https://morning-temple-99359.herokuapp.com/eureka/
+
+salesforce:
+  canvas:
+    client-secret: 7328736063856302294
+
+
+
